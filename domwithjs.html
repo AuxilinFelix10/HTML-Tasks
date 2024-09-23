@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <form id="myform" onsubmit="return Validateform()">
+        <h2>My Application form</h2>
+        <label for = "name"> Name : </label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for = "email"> Email : </label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for = "password"> Password : </label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for = "confirmpassword"> Confirm Password : </label>
+        <input type="password" id="confirmpassword" name="confirmpassword"><br><br>
+
+        <label for = "phone"> Phone Number : </label>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <input id="B" type="submit" value ='Submit'
+        <p id="errormsg" style="color:red;"></p>
+
+    </form>
+
+    <script>
+
+        function Validateform(){
+
+                var name=document.getElementById('name').value;
+                var email =document.getElementById('email').value;
+                var password =document.getElementById('password').value;
+                var confirmpassword =document.getElementById('confirmpassword').value;
+                var name =document.getElementById('phone').value;
+                var name =document.getElementById('errormsg').value;
+
+                var errormsg = document.getElementById('errormsg');
+                errormsg.textContent="";
+
+                if (name===""){
+                    errormsg.textContent="Please enter your name";
+                    return false;
+                }
+
+                var mail = "";
+                if (email===""){
+                    errormsg.textContent="Please enter the valid Email";
+                    return false;
+                }
+
+
+                if (password===""){
+                    errormsg.textContent="Please enter your Password";
+                    return false;
+                }
+
+
+                if (confirmpassword===""){
+                    errormsg.textContent="Please enter Confirm Password";
+                    return false;
+                }
+
+                if (phone===""){
+                    errormsg.textContent="Please enter your Phone number";
+                    return false;
+                }
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+
+
+</html>
